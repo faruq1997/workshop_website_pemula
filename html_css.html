@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Biodata RW</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        * {
+            box-sizing: border-box;
+        }      
+
+        /* Style inputs with type="text", select elements, and textareas */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type="submit"],input[type="reset"] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Add a background color and some padding around the form */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            
+        }
+
+        /* Style labels for radio buttons */
+        .container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Style radio buttons */
+        .container input[type="radio"] {
+            margin-top: 0; /* Reset margin-top for radio buttons */
+            margin-bottom: 0; /* Reset margin-bottom for radio buttons */
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulir Biodata RW</h2>
+    <div class="container">
+        <form action="/" method="post">
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="nik">NIK:</label>
+            <input type="text" id="nik" name="nik" required maxlength="16">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required maxlength="20">
+
+            <label for="tempat">Tempat lahir:</label>
+            <input type="text" id="tempat" name="tempat" required>
+
+            <label for="tanggal">Tanggal Lahir:</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+
+            <label for="pekerjaan">Pekerjan:</label>
+            <select id="pekerjaan" name="pekerjaan" required>
+                <option value="Wiraswasta">Wiraswasta</option>
+                <option value="PNS">PNS</option>
+            </select>
+
+            
+            <label>Jenis Kelamin: <br>
+                <input type="radio" id="jkel1" name="jkel" value="Laki-Laki"> Laki-Laki
+                <input type="radio" id="jkel2" name="jkel" value="Perempuan">Perempuan
+            </label>
+            
+            
+            <label for="alamat">Alamat Rumah:</label>
+            <textarea id="alamat" name="alamat" rows="4" cols="50"></textarea>
+
+            <input type="submit" value="Kirim">
+            <input type="reset" value="Batal">
+        </form>
+    </div>
+</body>
+</html>
